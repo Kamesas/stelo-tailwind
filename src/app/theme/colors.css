@@ -1,7 +1,18 @@
+/* 
+  --- How to Use These Colors ---
+  Text:       text-[color]       (e.g., text-plum, text-orange-200)
+  Background: bg-[color]         (e.g., bg-bone, bg-plum-5)
+  Borders:    border-[color]     (e.g., border-plum-10)
+  Dividers:   divide-[color]     (e.g., divide-white-200-20)
+  Ring:       ring-[color]       (e.g., ring-orange-200)
+  Accent:     accent-[color]     (e.g., accent-orange-100)
+  SVG Icons:  fill-[color], stroke-[color]
+*/
+
 @theme {
   --color-*: initial;
 
-  /* --- Primary Brand & UI Colors --- */
+  /* --- UI Colors as they are in the Figma design --- */
   --color-plum: #291928;
   --color-white: #ffffff;
   --color-bone: #f8f6f2;

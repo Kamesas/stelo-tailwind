@@ -8,5 +8,5 @@ body {
   color: var(--color-plum);
   font-family: var(--font-pastiche);
 
-  @apply text-body-1;
+   @apply type-body-1;
 }

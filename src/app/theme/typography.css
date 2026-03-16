@@ -1,149 +1,167 @@
 /* 
   --- How to Use Typography Utilities---
-    Headings:   text-h[1..6]
-    Body:       text-body-[1|2], text-body-[1|2]-md
-    Metadata:   text-meta-[data|data-md|eyebrow|nav|footer|cta]
+    Headings:   type-h[1..6]
+    Body:       type-body-[1|2], type-body-[1|2]-md
+    Metadata:   type-meta-[data|data-md|eyebrow|nav|footer|cta]
 */
 
 /* --- Headings --- */
-@utility text-h1 {
-  @apply text-s-48;
+@utility type-h1 {
+  font-size: var(--text-s-48, 3rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.15;
   letter-spacing: -0.01em;
   @media (min-width: 768px) {
-    @apply text-s-72;
+    font-size: var(--text-s-72, 4.5rem);
   }
 }
-@utility text-h2 {
-  @apply text-s-40;
+@utility type-h2 {
+  font-size: var(--text-s-40, 2.5rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.2;
   letter-spacing: -0.01em;
   @media (min-width: 768px) {
-    @apply text-s-64;
+    font-size: var(--text-s-64, 4rem);
   }
 }
-@utility text-h3 {
-  @apply text-s-36;
+@utility type-h3 {
+  font-size: var(--text-s-36, 2.25rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.2;
   letter-spacing: -0.01em;
   @media (min-width: 768px) {
-    @apply text-s-56;
+    font-size: var(--text-s-56, 3.5rem);
   }
 }
-@utility text-h4 {
-  @apply text-s-32;
+@utility type-h4 {
+  font-size: var(--text-s-32, 2rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.2;
   letter-spacing: -0.01em;
   @media (min-width: 768px) {
-    @apply text-s-48;
+    font-size: var(--text-s-48, 3rem);
   }
 }
-@utility text-h5 {
-  @apply text-s-24;
+@utility type-h5 {
+  font-size: var(--text-s-24, 1.5rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.2;
   letter-spacing: -0.01em;
   @media (min-width: 768px) {
-    @apply text-s-32;
+    font-size: var(--text-s-32, 2rem);
   }
 }
-@utility text-h6 {
-  @apply text-s-22;
+@utility type-h6 {
+  font-size: var(--text-s-22, 1.375rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.2;
   letter-spacing: -0.01em;
   @media (min-width: 768px) {
-    @apply text-s-26;
+    font-size: var(--text-s-26, 1.625rem);
   }
 }
 
 /* --- Body Text --- */
-@utility text-body-1 {
-  @apply text-s-18;
+@utility type-body-1 {
+  font-size: var(--text-s-18, 1.125rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.5;
   letter-spacing: 0.01em;
   @media (min-width: 768px) {
-    @apply text-s-20;
+    font-size: var(--text-s-20, 1.25rem);
   }
 }
-@utility text-body-1-md {
-  @apply text-body-1 font-medium;
-}
-@utility text-body-2 {
-  @apply text-s-14;
+@utility type-body-1-md {
+  font-size: var(--text-s-18, 1.125rem);
+  font-weight: var(--font-weight-medium, 500);
   font-family: var(--font-pastiche);
-  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.01em;
   @media (min-width: 768px) {
-    @apply text-s-16;
+    font-size: var(--text-s-20, 1.25rem);
   }
 }
-@utility text-body-2-md {
-  @apply text-body-2 font-medium;
+@utility type-body-2 {
+  font-size: var(--text-s-14, 0.875rem);
+  font-family: var(--font-pastiche);
+  font-weight: var(--font-weight-regular, 400);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  @media (min-width: 768px) {
+    font-size: var(--text-s-16, 1rem);
+  }
+}
+@utility type-body-2-md {
+  font-size: var(--text-s-14, 0.875rem);
+  font-weight: var(--font-weight-medium, 500);
+  font-family: var(--font-pastiche);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  @media (min-width: 768px) {
+    font-size: var(--text-s-16, 1rem);
+  }
 }
 
 /* --- Meta / Supporting UI --- */
-@utility text-meta-eyebrow {
-  @apply text-s-12;
+@utility type-meta-eyebrow {
+  font-size: var(--text-s-12, 0.75rem);
   font-family: var(--font-roboto);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.4;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   @media (min-width: 768px) {
-    @apply text-s-14;
+    font-size: var(--text-s-14, 0.875rem);
   }
 }
-@utility text-meta-data {
-  @apply text-s-12;
+@utility type-meta-data {
+  font-size: var(--text-s-12, 0.75rem);
   font-family: var(--font-roboto);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.5;
   letter-spacing: 0.01em;
 }
-@utility text-meta-data-md {
-  @apply text-meta-data font-medium;
+@utility type-meta-data-md {
+  font-size: var(--text-s-12, 0.75rem);
+  font-weight: var(--font-weight-medium, 500);
+  font-family: var(--font-roboto);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }
-@utility text-meta-nav {
-  @apply text-s-16;
+@utility type-meta-nav {
+  font-size: var(--text-s-16, 1rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.4;
   letter-spacing: 0.01em;
   @media (min-width: 768px) {
-    @apply text-s-14;
+    font-size: var(--text-s-14, 0.875rem);
   }
 }
-@utility text-meta-footer {
-  @apply text-s-16;
+@utility type-meta-footer {
+  font-size: var(--text-s-16, 1rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.5;
   letter-spacing: 0.01em;
   @media (min-width: 768px) {
-    @apply text-s-14;
+    font-size: var(--text-s-14, 0.875rem);
   }
 }
-@utility text-meta-cta {
-  @apply text-s-14;
+@utility type-meta-cta {
+  font-size: var(--text-s-14, 0.875rem);
   font-family: var(--font-pastiche);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular, 400);
   line-height: 1.1;
   letter-spacing: 0.01em;
   @media (min-width: 768px) {
-    @apply text-s-16;
+    font-size: var(--text-s-16, 1rem);
   }
 }

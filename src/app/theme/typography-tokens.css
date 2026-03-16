@@ -19,19 +19,19 @@
   --font-smoothing: antialiased;
 
   /* --- Font Size Scale (text-s-*) --- */
-  --text-s-12: 12px;
-  --text-s-14: 14px;
-  --text-s-16: 16px;
-  --text-s-18: 18px;
-  --text-s-20: 20px;
-  --text-s-22: 22px;
-  --text-s-24: 24px;
-  --text-s-26: 26px;
-  --text-s-32: 32px;
-  --text-s-36: 36px;
-  --text-s-40: 40px;
-  --text-s-48: 48px;
-  --text-s-56: 56px;
-  --text-s-64: 64px;
-  --text-s-72: 72px;
+  --text-s-12: 0.75rem;     /* 12px */
+  --text-s-14: 0.875rem;    /* 14px */
+  --text-s-16: 1rem;        /* 16px */
+  --text-s-18: 1.125rem;    /* 18px */
+  --text-s-20: 1.25rem;     /* 20px */
+  --text-s-22: 1.375rem;    /* 22px */
+  --text-s-24: 1.5rem;      /* 24px */
+  --text-s-26: 1.625rem;    /* 26px */
+  --text-s-32: 2rem;        /* 32px */
+  --text-s-36: 2.25rem;     /* 36px */
+  --text-s-40: 2.5rem;      /* 40px */
+  --text-s-48: 3rem;        /* 48px */
+  --text-s-56: 3.5rem;      /* 56px */
+  --text-s-64: 4rem;        /* 64px */
+  --text-s-72: 4.5rem;      /* 72px */
 }

@@ -14,7 +14,7 @@ export const TrackingGlucose = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-  const counterRef = useRef<HTMLSpanElement>(null);
+  const counterRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<HTMLDivElement>(null);
 
@@ -135,7 +135,7 @@ export const TrackingGlucose = () => {
         it easier to improve energy, sleep, and overall health.
       </h2>
 
-      <div className="relative w-full max-w-[1360px] mx-auto aspect-1360/989 rounded-3xl overflow-hidden">
+      <div className="relative mx-auto aspect-1360/989 rounded-3xl overflow-hidden">
         <div ref={bgRef} className="absolute inset-0">
           {slides.map((slide, i) => (
             <div
@@ -149,14 +149,12 @@ export const TrackingGlucose = () => {
           ))}
         </div>
 
-        <div className="absolute left-[2.3%] top-[4%] flex items-center px-8 py-4 rounded-full bg-black/20 backdrop-blur-[7px]">
-          <span
-            ref={counterRef}
-            className="font-heading text-sm leading-tight text-white"
-          >
-            {String(activeIndex + 1).padStart(2, "0")} /{" "}
-            {String(slides.length).padStart(2, "0")}
-          </span>
+        <div
+          ref={counterRef}
+          className="absolute left-[30px] top-[80px] flex items-center px-8 py-4 rounded-full bg-black-20 backdrop-blur-[3.5px] font-pastiche text-s-14"
+        >
+          {String(activeIndex + 1).padStart(2, "0")} /{" "}
+          {String(slides.length).padStart(2, "0")}
         </div>
 
         <div className="relative h-full grid grid-cols-[1fr_auto_1fr] items-center gap-[62px] px-[16px]">

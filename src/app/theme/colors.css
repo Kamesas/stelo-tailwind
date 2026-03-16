@@ -12,21 +12,13 @@
 @theme {
   --color-*: initial;
 
-  /* --- UI Colors as they are in the Figma design --- */
-  --color-plum: #291928;
-  --color-white: #ffffff;
-  --color-bone: #f8f6f2;
-  --color-tan: #ebe6e0;
-  --color-tangerine: #f0b377;
-
-  --color-warning: #fcaf2d;
-  --color-error: #ac3d2e;
-  --color-success: #015651;
+  --color-red: #ac3d2e;
+  --color-pine: #015651;
 
   /* --- Semantic Scales & Opacity Variations --- */
 
   /* Plum Scale */
-  --color-plum-100: var(--color-plum);
+  --color-plum-100: #291928;
   --color-plum-80: rgba(41, 25, 40, 0.8);
   --color-plum-70: rgba(41, 25, 40, 0.7);
   --color-plum-40: rgba(41, 25, 40, 0.4);
@@ -34,9 +26,10 @@
   --color-plum-5: rgba(41, 25, 40, 0.05);
 
   /* White Scale */
-  --color-white-100: var(--color-white);
-  --color-white-200: var(--color-bone);
-  --color-white-300: var(--color-tan);
+  --color-white-100: #ffffff;
+  --color-white-200: #f8f6f2;
+  --color-white-300: #ebe6e0;
+
   --color-white-200-80: rgba(248, 246, 242, 0.8);
   --color-white-200-60: rgba(248, 246, 242, 0.6);
   --color-white-200-40: rgba(248, 246, 242, 0.4);
@@ -44,6 +37,6 @@
   --color-white-200-10: rgba(248, 246, 242, 0.1);
 
   /* Orange Scale */
-  --color-orange-100: var(--color-tangerine);
-  --color-orange-200: var(--color-warning);
+  --color-orange-100: #f0b377;
+  --color-orange-200: #fcaf2d;
 }

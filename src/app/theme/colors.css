@@ -37,8 +37,6 @@
   --color-white-100: var(--color-white);
   --color-white-200: var(--color-bone);
   --color-white-300: var(--color-tan);
-
-  /* Bone / White-200 Opacity Variations */
   --color-white-200-80: rgba(248, 246, 242, 0.8);
   --color-white-200-60: rgba(248, 246, 242, 0.6);
   --color-white-200-40: rgba(248, 246, 242, 0.4);

@@ -1,0 +1,19 @@
+.PDPHeroModalSlideshow {
+}
+
+.PDPHeroModalSlideshow :global(.slick-list) {
+  height: 100%;
+}
+
+.PDPHeroModalSlideshow :global(.slick-track) {
+  display: flex;
+  align-items: center;
+}
+
+.PDPHeroModalSlideshow :global(.slick-slide) {
+  display: flex;
+}
+
+.PDPHeroModalSlideshow :global(.slick-slide) > div {
+  margin: 0 auto;
+}

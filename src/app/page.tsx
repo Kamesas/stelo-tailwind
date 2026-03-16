@@ -1,3 +1,5 @@
+import React from "react";
+import { Button } from "./components/Button";
 import { PDPHeroDesktop } from "@/components/PDPHero/PDPHeroDesktop";
 import { PDPHeroMobile } from "@/components/PDPHero/PDPHeroMobile/PDPHeroMobile";
 import { PDPHeroText } from "@/components/PDPHero/PDPHeroText/PDPHeroText";

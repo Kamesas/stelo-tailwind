@@ -1,0 +1,44 @@
+/* 
+  --- How to Use These Colors ---
+  Text:       text-[color]       (e.g., text-plum, text-orange-200)
+  Background: bg-[color]         (e.g., bg-bone, bg-plum-5)
+  Borders:    border-[color]     (e.g., border-plum-10)
+  Dividers:   divide-[color]     (e.g., divide-white-200-20)
+  Ring:       ring-[color]       (e.g., ring-orange-200)
+  Accent:     accent-[color]     (e.g., accent-orange-100)
+  SVG Icons:  fill-[color], stroke-[color]
+*/
+
+@theme {
+  --color-*: initial;
+
+  --color-red: #ac3d2e;
+  --color-pine: #015651;
+
+  /* --- Semantic Scales & Opacity Variations --- */
+
+  /* Plum Scale */
+  --color-plum-100: #291928;
+  --color-plum-80: rgba(41, 25, 40, 0.8);
+  --color-plum-70: rgba(41, 25, 40, 0.7);
+  --color-plum-40: rgba(41, 25, 40, 0.4);
+  --color-plum-10: rgba(41, 25, 40, 0.1);
+  --color-plum-5: rgba(41, 25, 40, 0.05);
+
+  /* White Scale */
+  --color-white-100: #ffffff;
+  --color-white-200: #f8f6f2;
+  --color-white-300: #ebe6e0;
+
+  --color-white-200-80: rgba(248, 246, 242, 0.8);
+  --color-white-200-60: rgba(248, 246, 242, 0.6);
+  --color-white-200-40: rgba(248, 246, 242, 0.4);
+  --color-white-200-20: rgba(248, 246, 242, 0.2);
+  --color-white-200-10: rgba(248, 246, 242, 0.1);
+
+  /* Orange Scale */
+  --color-orange-100: #f0b377;
+  --color-orange-100-33: #f0b37733;
+
+  --color-orange-200: #fcaf2d;
+}

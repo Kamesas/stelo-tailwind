@@ -17,7 +17,7 @@ export const PDPHeroDesktop = () => {
   const [showModalSlider, setShowModalSlider] = useState(false);
   const [slideIndex, setSlideIndex] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
-  const [showSlideshow, setShowSlideshow] = useState(true);
+  const [showSlideshow, setShowSlideshow] = useState(false);
 
   const settings = {
     dots: false,
@@ -25,7 +25,7 @@ export const PDPHeroDesktop = () => {
     fade: true,
     infinite: true,
     speed: 1000,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     cssEase: "ease-in",
     beforeChange: (_current: number, next: number) => setSlideIndex(next),
@@ -35,39 +35,46 @@ export const PDPHeroDesktop = () => {
     console.log("%c- OPEN CART MODAL -", "color: lime; font-size: 20px;");
   }
 
+  console.log(
+    "%c- FINISH LOGICS BETWEEN SLIDERS, mobile page fonts colors spacings etc -",
+    "color: lime; font-size: 20px;",
+  );
+
   return (
     <>
       <div className="relative h-[800px] w-full p-12 flex items-end justify-center">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
-          <Slider
-            {...settings}
-            className={`${styles.slider} h-full w-full`}
-            ref={(slider) => {
-              sliderRef.current = slider;
-            }}
-          >
-            {SLIDES.map((slide) => (
-              <div
-                key={slide.id}
-                className="relative h-[800px] w-full"
-                onClick={() => openCartModal(slide.id)}
-              >
-                <Image
-                  src={slide.src}
-                  fill
-                  className="object-cover"
-                  alt={slide.alt || "Product image"}
-                  priority
-                />
-              </div>
-            ))}
-          </Slider>
+          {!showSlideshow && (
+            <Slider
+              {...settings}
+              className={`${styles.slider} h-full w-full`}
+              ref={(slider) => {
+                sliderRef.current = slider;
+              }}
+            >
+              {SLIDES.map((slide) => (
+                <div
+                  key={slide.id}
+                  className="relative h-[800px] w-full"
+                  onClick={() => setShowSlideshow(true)}
+                >
+                  <Image
+                    src={slide.src}
+                    fill
+                    className="object-cover"
+                    alt={slide.alt || "Product image"}
+                    priority
+                  />
+                </div>
+              ))}
+            </Slider>
+          )}
         </div>
 
         <div className="relative z-10 flex h-full w-full items-end justify-between pointer-events-none">
-          <div className="max-w-[440px]">
+          <div className="max-w-[440px] pointer-events-auto ">
             <PDPHeroText
-              className="pointer-events-auto"
+              className={`${slideIndex !== 0 ? "text-white-200" : ""}`}
               title="Stelo Glucose Biosensor"
               text="Stelo tracks your glucose with a small arm sensor, showing your trends with the app."
               text2="HSA/FSA eligible"
@@ -80,7 +87,7 @@ export const PDPHeroDesktop = () => {
                   onClick={() => sliderRef.current?.slickGoTo(i)}
                   className={`
                   relative h-11 w-11 overflow-hidden rounded-[4px] border-2 transition-all
-                  ${slideIndex === i ? "border-red-600" : "border-transparent"}
+                  ${slideIndex === i ? "border-orange-100" : "border-transparent"}
                 `}
                 >
                   <Image
@@ -96,13 +103,18 @@ export const PDPHeroDesktop = () => {
           </div>
 
           <PDPHeroPricing
+            glassDesign={slideIndex !== 0}
             onSelectCallback={setSelectedProduct}
             className="pointer-events-auto"
           />
         </div>
       </div>
       {showSlideshow && (
-        <PDPHeroModalSlideshow activeSlide={slideIndex} slides={SLIDES} />
+        <PDPHeroModalSlideshow
+          activeSlide={slideIndex}
+          slides={SLIDES}
+          onClose={() => setShowSlideshow(false)}
+        />
       )}
     </>
   );

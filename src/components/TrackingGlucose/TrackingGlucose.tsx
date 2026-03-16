@@ -129,11 +129,8 @@ export const TrackingGlucose = () => {
   // });
 
   return (
-    <section
-      ref={sectionRef}
-      className="flex flex-col gap-[105px] bg-surface-light px-2 py-20 max-w-[1440px] mx-auto"
-    >
-      <h2 className="font-heading text-[40px] leading-[1.3] tracking-[-0.01em] text-surface-dark max-w-[929px]">
+    <section ref={sectionRef} className="px-10 py-20 max-w-[1440px] mx-auto">
+      <h2 className="type-h2 text-plum-100 max-w-[930px] mb-[105px]">
         Tracking glucose helps you see how daily habits affect your body, making
         it easier to improve energy, sleep, and overall health.
       </h2>

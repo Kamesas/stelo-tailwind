@@ -6,25 +6,27 @@ type SlideInfoProps = {
 
 export const SlideInfo = ({ metric }: SlideInfoProps) => {
   return (
-    <div className="flex items-center gap-[52px]">
-      <div className="flex gap-1.5">
-        <span className="font-heading text-[51px] leading-[1.4] tracking-[-0.02em] text-surface-light">
+    <div className="flex items-center justify-between gap-[52px]">
+      <div className="flex items-start gap-1.5">
+        <span className="font-pastiche text-[51px] leading-none text-white-200">
           {metric.value}
         </span>
-        <span className="font-heading text-[13px] leading-[1.4] text-surface-light">
+        <span className="font-pastiche text-[12px] text-white-200">
           {metric.unit}
         </span>
       </div>
 
       <div className="flex items-center gap-2">
-        <span className="font-heading text-lg leading-[1.2] tracking-[-0.02em] text-white whitespace-pre-line w-20">
+        <span className="font-pastiche text-s-18 whitespace-pre-line text-white-200">
           {metric.label}
         </span>
+
         <svg
           width="17"
           height="16"
           viewBox="0 0 19 18"
           fill="none"
+          className="text-white-200"
           aria-hidden="true"
         >
           <path

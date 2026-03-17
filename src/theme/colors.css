@@ -17,6 +17,8 @@
 
   /* --- Semantic Scales & Opacity Variations --- */
 
+  --color-black-20: rgba(0, 0, 0, 0.2);
+
   /* Plum Scale */
   --color-plum-100: #291928;
   --color-plum-80: rgba(41, 25, 40, 0.8);

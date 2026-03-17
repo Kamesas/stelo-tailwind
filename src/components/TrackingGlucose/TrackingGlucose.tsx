@@ -58,7 +58,7 @@ export const TrackingGlucose = () => {
       tl.to(
         cards[activeIndex],
         {
-          backgroundColor: "rgba(0,0,0,0.2)",
+          // backgroundColor: "rgba(0,0,0,0.2)",
           duration: 0.4,
           ease: "power2.inOut",
         },
@@ -67,7 +67,7 @@ export const TrackingGlucose = () => {
       tl.to(
         cards[index],
         {
-          backgroundColor: "rgba(0,0,0,0.1)",
+          // backgroundColor: "rgba(0,0,0,0.1)",
           duration: 0.4,
           ease: "power2.inOut",
         },
@@ -157,12 +157,12 @@ export const TrackingGlucose = () => {
           {String(slides.length).padStart(2, "0")}
         </div>
 
-        <div className="relative h-full grid grid-cols-[1fr_auto_1fr] items-center gap-[62px] px-[16px]">
-          <div ref={infoRef} className="grid justify-self-end">
+        <div className="relative h-full grid grid-cols-[1fr_auto_1fr] items-center gap-[62px]">
+          <div ref={infoRef} className="grid justify-self-end overflow-hidden">
             {slides.map((slide, i) => (
               <div
                 key={slide.number}
-                className="col-start-1 row-start-1"
+                className="col-start-1 row-start-1 h-[52px]"
                 style={{ opacity: i === 0 ? 1 : 0 }}
               >
                 <SlideInfo metric={slide.metric} />
